@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <!-- 头部导航栏 -->
   <div class="header-wrapper">
     <div class="container">
@@ -118,7 +118,7 @@ const activeMenu = computed(() => route.path)
 const getUserAvatar = () => {
   if (!userInfo.value.avatar) return ''
   if (userInfo.value.avatar.startsWith('http')) return userInfo.value.avatar
-  return `http://localhost:8080/api${userInfo.value.avatar}`
+  return getImageUrl(userInfo.value.avatar)
 }
 
 const handleSearch = () => {

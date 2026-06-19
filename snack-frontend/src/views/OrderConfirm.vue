@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="order-confirm-page">
     <div class="container">
       <div class="page-header">
@@ -137,7 +137,7 @@ const totalAmount = computed(() => {
 const getImageUrl = (path) => {
   if (!path) return '/placeholder.png'
   if (path.startsWith('http')) return path
-  return `http://localhost:8080/api${path}`
+  return getImageUrl(path)
 }
 
 const fetchAddresses = async () => {

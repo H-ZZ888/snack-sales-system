@@ -161,7 +161,7 @@ const passwordRules = {
 const getAdminAvatar = () => {
   if (!form.avatar) return ''
   if (form.avatar.startsWith('http')) return form.avatar
-  return `http://localhost:8080/api${form.avatar}`
+  return getImageUrl(form.avatar)
 }
 
 const loadAdminInfo = async () => {

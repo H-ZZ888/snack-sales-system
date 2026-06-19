@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="admin-users">
     <el-card shadow="hover">
       <!-- 操作栏 -->
@@ -123,9 +123,9 @@ const getUserAvatar = (avatar) => {
   if (!avatar) return ''
   if (avatar.startsWith('http')) return avatar
   if (avatar.startsWith('/api')) {
-    return 'http://localhost:8080' + avatar
+    return getApiUrl(avatar)
   }
-  return 'http://localhost:8080/api' + avatar
+  return getApiUrl(avatar)
 }
 
 // 加载用户列表

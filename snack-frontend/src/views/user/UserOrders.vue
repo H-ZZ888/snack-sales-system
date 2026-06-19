@@ -367,7 +367,7 @@ const total = ref(0)
 const getImageUrl = (path) => {
   if (!path) return '/placeholder.png'
   if (path.startsWith('http')) return path
-  return `http://localhost:8080/api${path}`
+  return getImageUrl(path)
 }
 
 const getStatusType = (order) => {

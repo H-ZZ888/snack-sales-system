@@ -170,7 +170,7 @@ const checkAll = ref(false)
 const getImageUrl = (path) => {
   if (!path) return '/placeholder.png'
   if (path.startsWith('http')) return path
-  return `http://localhost:8080/api${path}`
+  return getImageUrl(path)
 }
 
 const goToDetail = (productId) => {

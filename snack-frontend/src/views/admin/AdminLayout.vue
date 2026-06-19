@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <el-container class="admin-layout">
     <!-- 侧边栏 -->
     <el-aside :width="isCollapse ? '64px' : '240px'" class="admin-aside">
@@ -145,7 +145,7 @@ const toggleCollapse = () => {
 const getAdminAvatar = () => {
   if (!adminInfo.value.avatar) return ''
   if (adminInfo.value.avatar.startsWith('http')) return adminInfo.value.avatar
-  return `http://localhost:8080/api${adminInfo.value.avatar}`
+  return getImageUrl(adminInfo.value.avatar)
 }
 
 const goToUserSite = () => {

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="articles-page">
     <div class="container">
       <h1>资讯中心</h1>
@@ -91,7 +91,7 @@ const searchKeyword = ref('')
 const getImageUrl = (path) => {
   if (!path) return '/placeholder.png'
   if (path.startsWith('http')) return path
-  return `http://localhost:8080/api${path}`
+  return getImageUrl(path)
 }
 
 const goToDetail = (id) => {

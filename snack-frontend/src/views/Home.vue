@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="home">
     <!-- 轮播图区域 -->
     <div class="banner-section">
@@ -174,7 +174,7 @@ const getCategoryIcon = (categoryName) => {
 const getImageUrl = (path) => {
   if (!path) return '/placeholder.png'
   if (path.startsWith('http')) return path
-  return `http://localhost:8080/api${path}`
+  return getImageUrl(path)
 }
 
 const goToProducts = (categoryId) => {

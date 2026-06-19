@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="user-favorites">
     <div class="page-header">
       <div class="header-content">
@@ -98,7 +98,7 @@ const pageSize = ref(6)
 const getImageUrl = (path) => {
   if (!path) return '/placeholder.png'
   if (path.startsWith('http')) return path
-  return `http://localhost:8080/api${path}`
+  return getImageUrl(path)
 }
 
 const goToDetail = (productId) => {
