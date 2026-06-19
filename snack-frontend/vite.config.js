@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from 'vite'
+﻿import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
-    base: '/snack-sales-system/',
+    base: './',
     plugins: [vue()],
     resolve: {
       alias: {
