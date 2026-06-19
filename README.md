@@ -47,11 +47,11 @@
 |------|------|------|
 | Spring Boot | 3.2.0 | 核心框架 |
 | MyBatis-Plus | 3.5.9 | ORM 框架 |
-| MySQL | 8.0+ | 数据库 |
-| JWT (jjwt) | 0.12.6 | 身份认证 |
+| MySQL | 8.0+ | 数据库 |   | MySQL | 8.0  | 数据库 |
+| JWT | 0.12.6 | 身份认证 |
 | Lombok | - | 代码简化 |
 | Hutool | 5.8.25 | 工具库 |
-| Maven | 3.6+ | 构建工具 |
+| Maven | 3.6+ | 构建工具 |   | Maven | 3.6  | 构建工具 |
 
 ### 前端
 
@@ -87,9 +87,9 @@
 
 ## 环境要求
 
-- **Java**: JDK 17
-- **MySQL**: 8.0+
-- **Maven**: 3.6+
+- **Java**: JDK 17   —**Java**: JDK 17- **Java**: JDK 17 —**Java**: JDK 17Java * * - * *: JDK 17本;Java * * * *: Java JDK 17 - * * * *: JDK 17本;Java * * * *: JDK 17Java * * - * *: JDK 17本;Java * * * *: Java JDK 17 - * * * *: JDK 17本;Java * * * *: Java JDK 17  * * - * *: JDK 17本;Java * * * *: Java JDK 17 - * * * *: JDK 17；Java * * * *: JDK 17
+- **MySQL**: 8.0+   —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0
+- **Maven**: 3.6+   - **Maven**: 3.6- **Maven**: 3.6 - **Maven**: 3.6
 - **Node.js**: 16+
 - **npm**: 8+
 
@@ -110,7 +110,7 @@ CREATE DATABASE snack_sales_system CHARACTER SET utf8mb4 COLLATE utf8mb4_general
 
 导入数据库脚本：
 
-```bash
+```bash   ”“bash
 mysql -u root -p snack_sales_system < snack-backend/sql/snack_sales_system.sql
 ```
 
