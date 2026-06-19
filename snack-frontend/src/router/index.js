@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import store from '@/store'
 
 const routes = [
@@ -40,7 +40,7 @@ const routes = [
         path: 'articles',
         name: 'Articles',
         component: () => import('@/views/Articles.vue'),
-        meta: { title: '资讯列表' }
+        meta: { title: '食品资讯' }
       },
       {
         path: 'article/:id',
@@ -99,7 +99,6 @@ const routes = [
     component: () => import('@/views/Register.vue'),
     meta: { title: '用户注册' }
   },
-  // 管理员端路由
   {
     path: '/admin/login',
     name: 'AdminLogin',
@@ -175,23 +174,21 @@ const routes = [
         path: 'profile',
         name: 'AdminProfile',
         component: () => import('@/views/admin/AdminProfile.vue'),
-        meta: { title: '个人中心', requireAdminAuth: true }
+        meta: { title: '个人信息', requireAdminAuth: true }
       }
     ]
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 
 // 路由守卫
 router.beforeEach((to, from, next) => {
-  // 设置页面标题
   document.title = to.meta.title ? `${to.meta.title} - 零食销售管理系统` : '零食销售管理系统'
   
-  // 判断是否需要管理员登录
   if (to.meta.requireAdminAuth) {
     if (store.state.admin.token) {
       next()
@@ -201,9 +198,7 @@ router.beforeEach((to, from, next) => {
         query: { redirect: to.fullPath }
       })
     }
-  }
-  // 判断是否需要用户登录
-  else if (to.meta.requireAuth) {
+  } else if (to.meta.requireAuth) {
     if (store.state.user.token) {
       next()
     } else {
@@ -218,4 +213,3 @@ router.beforeEach((to, from, next) => {
 })
 
 export default router
-
