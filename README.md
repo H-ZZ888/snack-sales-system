@@ -3,6 +3,8 @@
 > 基于 Spring Boot 3 + Vue 3 的前后端分离零食在线销售平台
 
 - **前端在线地址**：[https://h-zz888.github.io/snack-sales-system/](https://h-zz888.github.io/snack-sales-system/)
+- **GitHub 仓库**：[https://github.com/H-ZZ888/snack-sales-system](https://github.com/H-ZZ888/snack-sales-system)
+- **联系方式**：foxth818@gmail.com（如需获取完整项目源码或部署帮助，请通过邮箱联系）
 
 ## 在线访问
 
