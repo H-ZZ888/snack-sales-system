@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="admin-orders">
     <el-card shadow="hover">
       <!-- 操作栏 -->
@@ -263,10 +263,10 @@ const getImageUrl = (path) => {
   if (path.startsWith('http')) return path
   // 如果路径已经包含/api，直接拼接
   if (path.startsWith('/api')) {
-    return 'http://localhost:8080' + path
+    return getApiUrl(path)
   }
   // 否则添加/api前缀
-  return 'http://localhost:8080/api' + path
+  return getApiUrl(path)
 }
 
 // 加载订单列表

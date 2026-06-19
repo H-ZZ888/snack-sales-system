@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="banner-manage">
     <el-card>
       <template #header>
@@ -198,7 +198,7 @@ const rules = {
   sortOrder: [{ required: true, message: '请输入排序号', trigger: 'blur' }]
 }
 
-const uploadUrl = 'http://localhost:8080/api/file/upload'
+const uploadUrl = getUploadUrl()
 const uploadHeaders = {
   Authorization: localStorage.getItem('adminToken')
 }

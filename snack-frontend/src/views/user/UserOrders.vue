@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="user-orders">
     <h2 class="page-title">我的订单</h2>
 
@@ -760,7 +760,7 @@ const reviewForm = ref({
   images: [] // 评价图片列表
 })
 const uploadingImage = ref(false)
-const imageUploadUrl = 'http://localhost:8080/api/file/upload'
+const imageUploadUrl = getUploadUrl()
 
 onMounted(() => {
   fetchOrders()

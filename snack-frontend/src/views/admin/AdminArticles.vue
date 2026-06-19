@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="admin-articles">
     <div class="page-header">
       <h2 class="page-title">资讯管理</h2>
@@ -196,7 +196,7 @@ const rules = {
   content: [{ required: true, message: '请输入资讯内容', trigger: 'blur' }]
 }
 
-const uploadUrl = 'http://localhost:8080/api/file/upload'
+const uploadUrl = getUploadUrl()
 
 // 上传请求头（包含JWT token）
 const uploadHeaders = ref({

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="admin-products">
     <div class="page-header">
       <h2 class="page-title">商品管理</h2>
@@ -263,7 +263,7 @@ const rules = {
   image: [{ required: true, message: '请上传商品图片', trigger: 'change' }]
 }
 
-const uploadUrl = 'http://localhost:8080/api/file/upload'
+const uploadUrl = getUploadUrl()
 
 // 上传请求头（包含JWT token）
 const uploadHeaders = ref({

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="admin-profile">
     <el-card shadow="hover" class="profile-card">
       <div class="profile-header">
@@ -199,7 +199,7 @@ const handleAvatarChange = async (event) => {
   
   try {
     const token = localStorage.getItem('adminToken')
-    const response = await axios.post('http://localhost:8080/api/file/upload', formData, {
+    const response = await axios.post(getUploadUrl(), formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         'Authorization': `Bearer ${token}`

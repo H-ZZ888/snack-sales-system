@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="article-detail">
     <div class="container">
       <!-- 返回按钮 -->
@@ -136,9 +136,9 @@ const getImageUrl = (path) => {
   if (!path) return ''
   if (path.startsWith('http')) return path
   if (path.startsWith('/api')) {
-    return 'http://localhost:8080' + path
+    return getApiUrl(path)
   }
-  return 'http://localhost:8080/api' + path
+  return getApiUrl(path)
 }
 
 const formatContent = (content) => {
