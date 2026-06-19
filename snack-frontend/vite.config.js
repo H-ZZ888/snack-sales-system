@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
+    base: '/snack-sales-system/',
     plugins: [vue()],
     resolve: {
       alias: {
