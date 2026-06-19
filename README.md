@@ -133,8 +133,6 @@ cd snack-backend
 mvn spring-boot:run
 ```
 
-默认后端接口地址：`http://localhost:8080/api`
-
 如需修改数据库连接，请编辑 `snack-backend/src/main/resources/application.yml`。
 
 ### 4. 启动前端
@@ -144,8 +142,6 @@ cd snack-frontend
 npm install
 npm run dev
 ```
-
-默认前端访问地址：`http://localhost:5172`
 
 ## 部署指南
 
