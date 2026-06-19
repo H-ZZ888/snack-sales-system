@@ -275,10 +275,13 @@ const averageRating = computed(() => {
 const getImageUrl = (path) => {
   if (!path) return ''
   if (path.startsWith('http')) return path
+  const base = import.meta.env.VITE_API_BASE || '/api'
+  const baseUrl = base.startsWith('http') ? base : window.location.origin + base
   if (path.startsWith('/api')) {
-    return 'http://localhost:8080' + path
+    const clean = baseUrl.replace(/\/api$/, '')
+    return clean + path
   }
-  return 'http://localhost:8080/api' + path
+  return baseUrl + path
 }
 
 const getUserAvatar = (avatar) => {

@@ -145,7 +145,13 @@ const filters = reactive({
 const getImageUrl = (path) => {
   if (!path) return '/placeholder.png'
   if (path.startsWith('http')) return path
-  return `http://localhost:8080/api${path}`
+  const base = import.meta.env.VITE_API_BASE || '/api'
+  const baseUrl = base.startsWith('http') ? base : window.location.origin + base
+  if (path.startsWith('/api')) {
+    const clean = baseUrl.replace(/\/api$/, '')
+    return clean + path
+  }
+  return baseUrl + path
 }
 
 const goToDetail = (id) => {
