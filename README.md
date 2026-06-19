@@ -1,8 +1,6 @@
 # 零食销售管理系统
 
 > 基于 Spring Boot 3 + Vue 3 的前后端分离零食在线销售平台（前端演示版）
-
-- **前端在线演示**：[https://h-zz888.github.io/snack-sales-system/](https://h-zz888.github.io/snack-sales-system/)
 - **GitHub 仓库**：[https://github.com/H-ZZ888/snack-sales-system](https://github.com/H-ZZ888/snack-sales-system)
 
 ---
