@@ -2,17 +2,19 @@
 
 > 基于 Spring Boot 3 + Vue 3 的前后端分离零食在线销售平台
 
+- **前端在线地址**：[https://snack-sales-system.hsz202506.workers.dev](https://snack-sales-system.hsz202506.workers.dev)
+
 ## 在线访问
 
 | 项目 | 状态 | 说明 |
 |------|------|------|
-| GitHub 仓库 | 已完成 | https://github.com/H-ZZ888/snack-sales-system |
-| 源代码访问 | 已完成 | 其他人可以克隆仓库查看和运行源码 |
-| JAR 下载包 | 已完成 | 可直接从仓库 `release/` 目录下载 `snack-sales-system-1.0.0.jar` |
-| 前端在线站点 | 待配置 | 后续可接入 Cloudflare Pages / Vercel / Netlify |
-| 后端在线服务 | 待部署 | 需要云服务器、数据库和域名/API 地址 |
+| GitHub 仓库 | ✅ 已完成 | https://github.com/H-ZZ888/snack-sales-system |
+| 源代码访问 | ✅ 已完成 | 其他人可以克隆仓库查看和运行源码 |
+| JAR 下载包 | ✅ 已完成 | 可直接从仓库 `release/` 目录下载 `snack-sales-system-1.0.0.jar` |
+| 前端在线站点 | ✅ 已完成 | https://snack-sales-system.hsz202506.workers.dev （界面可浏览） |
+| 后端在线服务 | 🚧 待部署 | 需要云服务器、数据库和域名/API 地址 |
 
-> 当前别人已经可以访问 GitHub 仓库、下载源码和 JAR 包；如果要直接打开网页访问完整系统，还需要继续部署前端静态站点和后端服务。
+> 当前别人已经可以访问 GitHub 仓库、下载源码和 JAR 包、浏览前端在线站点；完整后端服务还需要继续部署。
 
 ## 项目简介
 
