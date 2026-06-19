@@ -51,13 +51,6 @@
 
 > 后端源码（snack-backend/）、数据库脚本、JAR 包等完整项目文件请联系 foxth818@gmail.com 获取。
 
-## 默认账号
-
-| 角色 | 账号 | 密码 |
-|------|------|------|
-| 管理员 | admin | admin123 |
-| 测试用户 | 请自行注册 | - |
-
 用户界面；
 <img width="1419" height="1175" alt="image" src="https://github.com/user-attachments/assets/98fc5d47-28fe-4a28-89b6-3f1780b61aec" />
 
