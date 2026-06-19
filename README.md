@@ -108,8 +108,6 @@ npm install
 npm run dev
 ```
 
-浏览器打开 `http://localhost:5172` 即可浏览界面。
-
 ## 默认账号
 
 | 角色 | 账号 | 密码 |
