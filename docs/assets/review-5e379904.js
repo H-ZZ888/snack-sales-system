@@ -1,0 +1,1 @@
+import{r}from"./request-6162389c.js";function o(e){return r({url:"/review/add",method:"post",data:e})}function u(e,t){return r({url:`/review/product/${e}`,method:"get",params:t})}function i(e){return r({url:`/review/delete/${e}`,method:"delete"})}export{o as a,i as d,u as g};

@@ -81,6 +81,7 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '@/utils/url'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
@@ -95,11 +96,6 @@ const total = ref(0)
 const pageNum = ref(1)
 const pageSize = ref(6)
 
-const getImageUrl = (path) => {
-  if (!path) return '/placeholder.png'
-  if (path.startsWith('http')) return path
-  return getImageUrl(path)
-}
 
 const goToDetail = (productId) => {
   router.push(`/product/${productId}`)

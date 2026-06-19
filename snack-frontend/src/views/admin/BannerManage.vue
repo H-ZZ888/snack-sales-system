@@ -155,6 +155,7 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '@/utils/url'
 import { ref, reactive, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { Search, Refresh, Plus, Edit, Delete } from '@element-plus/icons-vue'
@@ -203,11 +204,6 @@ const uploadHeaders = {
   Authorization: localStorage.getItem('adminToken')
 }
 
-const getImageUrl = (path) => {
-  if (!path) return ''
-  if (path.startsWith('http')) return path
-  return getImageUrl(path)
-}
 
 const fetchData = async () => {
   loading.value = true

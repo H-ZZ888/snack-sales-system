@@ -109,6 +109,7 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '@/utils/url'
 import { ref, computed, onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
@@ -134,11 +135,6 @@ const totalAmount = computed(() => {
     .toFixed(2)
 })
 
-const getImageUrl = (path) => {
-  if (!path) return '/placeholder.png'
-  if (path.startsWith('http')) return path
-  return getImageUrl(path)
-}
 
 const fetchAddresses = async () => {
   try {

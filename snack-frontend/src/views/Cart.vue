@@ -159,6 +159,7 @@ import {
   Goods
 } from '@element-plus/icons-vue'
 import { getCartList, updateCart, deleteCart, clearCart } from '@/api/cart'
+import { getImageUrl } from '@/utils/url'
 
 const router = useRouter()
 const store = useStore()
@@ -166,12 +167,6 @@ const store = useStore()
 const loading = ref(false)
 const cartList = ref([])
 const checkAll = ref(false)
-
-const getImageUrl = (path) => {
-  if (!path) return '/placeholder.png'
-  if (path.startsWith('http')) return path
-  return getImageUrl(path)
-}
 
 const goToDetail = (productId) => {
   router.push(`/product/${productId}`)

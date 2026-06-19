@@ -349,6 +349,7 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '@/utils/url'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
@@ -364,11 +365,6 @@ const pageNum = ref(1)
 const pageSize = ref(5)
 const total = ref(0)
 
-const getImageUrl = (path) => {
-  if (!path) return '/placeholder.png'
-  if (path.startsWith('http')) return path
-  return getImageUrl(path)
-}
 
 const getStatusType = (order) => {
   // 优先检查订单状态（已取消、已完成等）

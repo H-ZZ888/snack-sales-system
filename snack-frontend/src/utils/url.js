@@ -1,8 +1,3 @@
-/**
- * 获取完整的 API 地址
- * @param {string} path - 接口路径，如 '/api/uploads/xxx' 或 '/uploads/xxx'
- * @returns {string} 完整 URL
- */
 export function getApiUrl(path) {
   if (!path) return ''
   if (path.startsWith('http')) return path
@@ -15,22 +10,22 @@ export function getApiUrl(path) {
   return baseUrl + path
 }
 
-/**
- * 获取图片/文件完整 URL
- * @param {string} path - 图片路径
- * @param {string} fallback - 路径为空时的回退图片，默认空字符串
- * @returns {string} 完整 URL
- */
 export function getImageUrl(path, fallback = '') {
   if (!path) return fallback
   if (path.startsWith('http')) return path
+  if (path.startsWith('/uploads/')) {
+    const base = import.meta.env.BASE_URL || './'
+    const clean = base.endsWith('/') ? base : base + '/'
+    return clean + 'uploads/' + path.replace(/^\/uploads\//, '')
+  }
+  if (path.startsWith('images/') || path.startsWith('./images/')) {
+    const base = import.meta.env.BASE_URL || './'
+    const clean = base.endsWith('/') ? base : base + '/'
+    return clean + path.replace(/^\.\//, '')
+  }
   return getApiUrl(path)
 }
 
-/**
- * 获取文件上传接口地址
- * @returns {string}
- */
 export function getUploadUrl() {
   return getApiUrl('/api/file/upload')
 }
