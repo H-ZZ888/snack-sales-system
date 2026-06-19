@@ -7,3 +7,4 @@ target/
 uploads/
 .vscode/
 .DS_Store
+release/
