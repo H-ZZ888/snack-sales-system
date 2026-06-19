@@ -47,11 +47,11 @@
 |------|------|------|
 | Spring Boot | 3.2.0 | 核心框架 |
 | MyBatis-Plus | 3.5.9 | ORM 框架 |
-| MySQL | 8.0+ | 数据库 |   | MySQL | 8.0  | 数据库 |
+| MySQL | 8.0+ | 数据库 |   | MySQL | 8.0  | 数据库 || MySQL | 8.0  | 数据库 |   | MySQL | 8.0  | 数据库 |
 | JWT | 0.12.6 | 身份认证 |
 | Lombok | - | 代码简化 |
 | Hutool | 5.8.25 | 工具库 |
-| Maven | 3.6+ | 构建工具 |   | Maven | 3.6  | 构建工具 |
+| Maven | 3.6+ | 构建工具 |   | Maven | 3.6  | 构建工具 || Maven | 3.6  | 构建工具 |   | Maven | 3.6  | 构建工具 |
 
 ### 前端
 
@@ -87,36 +87,36 @@
 
 ## 环境要求
 
-- **Java**: JDK 17   —**Java**: JDK 17- **Java**: JDK 17 —**Java**: JDK 17Java * * - * *: JDK 17本;Java * * * *: Java JDK 17 - * * * *: JDK 17本;Java * * * *: JDK 17Java * * - * *: JDK 17本;Java * * * *: Java JDK 17 - * * * *: JDK 17本;Java * * * *: Java JDK 17  * * - * *: JDK 17本;Java * * * *: Java JDK 17 - * * * *: JDK 17；Java * * * *: JDK 17
-- **MySQL**: 8.0+   —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0- **MySQL**: 8.0    —**MySQL**: 8.0
-- **Maven**: 3.6+   - **Maven**: 3.6- **Maven**: 3.6 - **Maven**: 3.6
-- **Node.js**: 16+
-- **npm**: 8+
+- **Java**: JDK 17 
+- **MySQL**: 8.0+ 
+- **Maven**: 3.6+ 
+- **Node.js**: 16+ 
+- **npm**: 8+ 
 
 ## 快速开始
 
 ### 1. 克隆项目
 
-```bash
+```bash   ”“bash
 git clone https://github.com/H-ZZ888/snack-sales-system.git
 cd snack-sales-system
 ```
 
 ### 2. 数据库配置
 
-```sql
-CREATE DATABASE snack_sales_system CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+```sql   ”“sql
+CREATE DATABASE snack_sales_system CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;创建snack_sales_system数据库字符集utf8mb4整理utf8mb4_general_ci
 ```
 
 导入数据库脚本：
 
-```bash   ”“bash
-mysql -u root -p snack_sales_system < snack-backend/sql/snack_sales_system.sql
+```bash   ”“bash   “bash”;“bash
+mysql -u root -p snack_sales_system < snack-backend/sql/snack_sales_system.sql-u root -p snack_sales_system <
 ```
 
 ### 3. 后端启动
 
-```bash
+```bash   ”“bash
 cd snack-backend
 
 # 修改数据库配置（如需）
@@ -124,20 +124,20 @@ cd snack-backend
 # 默认配置: localhost:3306, root/root
 
 # 方式一：Maven 直接运行
-mvn spring-boot:run
+mvn spring-boot:run   运行mvn spring-boot:
 
 # 方式二：使用打包好的 JAR
-java -jar ../release/snack-sales-system-1.0.0.jar
+java -jar ../release/snack-sales-system-1.0.0.jarJava -jar ../release/snack-sales-system-1.0.0.jar
 ```
 
 后端接口地址：`http://localhost:8080/api`
 
 ### 4. 前端启动
 
-```bash
+```bash   ”“bash
 cd snack-frontend
 npm install
-npm run dev
+npm run dev   NPM运行dev
 ```
 
 访问地址：`http://localhost:5172`
@@ -157,24 +157,24 @@ npm run dev
 
 ### 后端部署 (云服务器)
 
-```bash
+```bash   ”“bash
 # 1. 上传 JAR 到服务器
-scp release/snack-sales-system-1.0.0.jar user@server:/opt/snack/
+scp release/snack-sales-system-1.0.0.jar user@server:/opt/snack/SCP release/snack-sales-system-1.0.0.jar user@server:/opt/snack/
 
 # 2. 启动服务
-cd /opt/snack
-nohup java -jar snack-sales-system-1.0.0.jar \
-  --spring.datasource.url=jdbc:mysql://localhost:3306/snack_sales_system \
-  --spring.datasource.username=root \
+cd /opt/snack   cd / opt /零食
+nohup java -jar snack-sales-system-1.0.0.jar \Java -jar零食-销售-系统-1.0.0.jar \
+  --spring.datasource.url=jdbc:mysql://localhost:3306/snack_sales_system \——spring.datasource。url = jdbc: mysql: / / localhost: 3306 / snack_sales_system \
+  --spring.datasource.username=root \——spring.datasource。用户名=根\
   --spring.datasource.password=你的密码 \
-  > app.log 2>&1 &
+  > app.log 2>&1 &   app.log 2>&1 &；
 
 # 3. Nginx 反向代理配置
 # server {
-#     listen 443 ssl;
-#     server_name api.yourdomain.com;
+#     listen 443 ssl;#监听443 ssl；
+#     server_name api.yourdomain.com;# server_name api.yourdomain.com；
 #     location / {
-#         proxy_pass http://127.0.0.1:8080;
+#         proxy_pass http://127.0.0.1:8080;# proxy_pass http://127.0.0.1:8080；
 #     }
 # }
 ```
