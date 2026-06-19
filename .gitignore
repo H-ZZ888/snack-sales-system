@@ -7,4 +7,4 @@ target/
 uploads/
 .vscode/
 .DS_Store
-release/
+# release/  (JAR 允许提交，方便直接下载)

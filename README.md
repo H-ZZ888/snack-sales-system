@@ -8,11 +8,11 @@
 |------|------|------|
 | GitHub 仓库 | 已完成 | https://github.com/H-ZZ888/snack-sales-system |
 | 源代码访问 | 已完成 | 其他人可以克隆仓库查看和运行源码 |
-| JAR 下载包 | 处理中 | 本地网络代理会中断 30MB 文件上传，已改为准备通过 GitHub Actions 在云端自动构建并发布 JAR |
+| JAR 下载包 | 已完成 | 可直接从仓库 `release/` 目录下载 `snack-sales-system-1.0.0.jar` |
 | 前端在线站点 | 待配置 | 后续可接入 Cloudflare Pages / Vercel / Netlify |
 | 后端在线服务 | 待部署 | 需要云服务器、数据库和域名/API 地址 |
 
-> 当前别人已经可以访问 GitHub 仓库和源码；如果要直接打开网页访问完整系统，还需要继续部署前端静态站点和后端服务。
+> 当前别人已经可以访问 GitHub 仓库、下载源码和 JAR 包；如果要直接打开网页访问完整系统，还需要继续部署前端静态站点和后端服务。
 
 ## 项目简介
 
@@ -89,7 +89,7 @@
 │   ├── src/store/                 # Vuex 状态管理
 │   ├── src/router/                # 路由配置
 │   └── package.json               # 依赖配置
-└── release/                       # 本地打包产物，不提交到 Git 仓库
+└── release/                       # JAR 可执行包
 ```
 
 ## 环境要求
