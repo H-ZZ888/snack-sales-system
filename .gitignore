@@ -8,3 +8,10 @@ uploads/
 .vscode/
 .DS_Store
 # release/  (JAR 允许提交，方便直接下载)
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
