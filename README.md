@@ -47,11 +47,11 @@
 |------|------|------|
 | Spring Boot | 3.2.0 | 核心框架 |
 | MyBatis-Plus | 3.5.9 | ORM 框架 |
-| MySQL | 8.0+ | 数据库 |   | MySQL | 8.0  | 数据库 || MySQL | 8.0  | 数据库 |   | MySQL | 8.0  | 数据库 |
+| MySQL | 8.0+ | 数据库 |   | MySQL | 8.0  | 数据库 || MySQL | 8.0  | 数据库 |   | MySQL | 8.0  | 数据库 || MySQL | 8.0  | 数据库 |   | MySQL | 8.0  | 数据库 || MySQL | 8.0  | 数据库 |   | MySQL | 8.0  | 数据库 |
 | JWT | 0.12.6 | 身份认证 |
 | Lombok | - | 代码简化 |
 | Hutool | 5.8.25 | 工具库 |
-| Maven | 3.6+ | 构建工具 |   | Maven | 3.6  | 构建工具 || Maven | 3.6  | 构建工具 |   | Maven | 3.6  | 构建工具 |
+| Maven | 3.6+ | 构建工具 |   | Maven | 3.6  | 构建工具 || Maven | 3.6  | 构建工具 |   | Maven | 3.6  | 构建工具 || Maven | 3.6  | 构建工具 |   | Maven | 3.6  | 构建工具 || Maven | 3.6  | 构建工具 |   | Maven | 3.6  | 构建工具 |
 
 ### 前端
 
@@ -97,7 +97,7 @@
 
 ### 1. 克隆项目
 
-```bash   ”“bash
+```bash   ”“bash   “bash”;“bash
 git clone https://github.com/H-ZZ888/snack-sales-system.git
 cd snack-sales-system
 ```
@@ -110,13 +110,13 @@ CREATE DATABASE snack_sales_system CHARACTER SET utf8mb4 COLLATE utf8mb4_general
 
 导入数据库脚本：
 
-```bash   ”“bash   “bash”;“bash
+```bash   ”“bash   “bash”;“bash```bash   ”“bash   “bash”;“bash
 mysql -u root -p snack_sales_system < snack-backend/sql/snack_sales_system.sql-u root -p snack_sales_system <
 ```
 
-### 3. 后端启动
+### 3. 后端启动   “bash”;“bash
 
-```bash   ”“bash
+```bash   ”“bash   “bash”;“bash
 cd snack-backend
 
 # 修改数据库配置（如需）
@@ -134,13 +134,11 @@ java -jar ../release/snack-sales-system-1.0.0.jarJava -jar ../release/snack-sale
 
 ### 4. 前端启动
 
-```bash   ”“bash
+```bash   ”“bash   “bash”;“bash
 cd snack-frontend
 npm install
 npm run dev   NPM运行dev
 ```
-
-访问地址：`http://localhost:5172`
 
 ## 部署指南
 
@@ -157,7 +155,7 @@ npm run dev   NPM运行dev
 
 ### 后端部署 (云服务器)
 
-```bash   ”“bash
+```bash   ”“bash   “bash”;“bash
 # 1. 上传 JAR 到服务器
 scp release/snack-sales-system-1.0.0.jar user@server:/opt/snack/SCP release/snack-sales-system-1.0.0.jar user@server:/opt/snack/
 
